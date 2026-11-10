@@ -1,3 +1,5 @@
+🌐 **English** · [Español](README.es.md) · [Italiano](README.it.md) · [Português](README.pt.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Ελληνικά](README.el.md) · [Български](README.bg.md) · [Українська](README.uk.md)
+
 # 🏍️ SmartZT, Unofficial Zontes companion app
 
 [![Latest release](https://img.shields.io/github/v/release/drkbcn/SmartZT)](https://github.com/drkbcn/SmartZT/releases/latest)
@@ -39,7 +41,7 @@ Light, dark or system theme can be chosen in **Settings › Theme**.
   encrypted QR code.
 - **Updates** — the app checks this page for new releases (at most once a day)
   and lets you download, postpone or skip a version. **Settings › About** also
-  shows the release notes. Builds never expire.
+  shows the release notes. Android builds never expire.
 
 ## Android Auto (experimental)
 
