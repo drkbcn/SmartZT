@@ -124,26 +124,64 @@ Open-Source-Tool für Sideloading:
    General › VPN & Device Management*), tippe auf deine Apple-ID und vertraue
    ihr.
 
-**Mit einer kostenlosen Apple-ID:**
-
-- Apple sorgt dafür, dass sich die App nach **7 Tagen** nicht mehr öffnen
-  lässt. Installiere sie mit Impactor erneut (Impactor kann sie auch für dich
-  erneuern); Garage, Einstellungen und Tankbuch bleiben erhalten.
-- Es können höchstens 3 per Sideloading installierte Apps gleichzeitig
-  vorhanden sein, und pro Woche lassen sich nur 10 App-IDs registrieren.
-  SmartZT braucht 2: die App und ihre Erweiterung für die
-  Bildschirmübertragung.
-
 **Wenn Impactor** `An Application Group with Identifier
 'group.com.vitapps.smartzt.…' is not available` **anzeigt**, installiere sie
 einfach noch einmal: das kann bei der ersten Installation passieren, und beim
 zweiten Versuch ist die Gruppe schon angelegt.
 
-AltStore, SideStore und Sideloadly sollten auch funktionieren, getestet wurde
-bisher aber nur Impactor.
-
 **Zum Aktualisieren** lädst du die neue `.ipa` herunter und installierst sie
 auf dieselbe Weise über die aktuelle.
+
+### Wie lange die Installation hält
+
+| Option | Lässt sich öffnen für | Kosten | Mit SmartZT getestet |
+|---|---|---|---|
+| Kostenlose Apple-ID (Impactor) | 7 Tage, dann erneuern | Kostenlos | Ja |
+| SideStore (kostenlose Apple-ID) | 7 Tage, auf dem iPhone erneuert | Kostenlos | Nein |
+| Kostenpflichtiges Apple-Entwicklerkonto | 1 Jahr | 99 USD pro Jahr | Nein |
+| TrollStore | Läuft nie ab | Kostenlos | Nein (nur ältere iOS-Versionen) |
+
+**Kostenlose Apple-ID (7 Tage).** Apple sorgt dafür, dass sich die App 7 Tage
+nach dem Signieren nicht mehr öffnen lässt. Erneuere sie vorher oder installiere
+sie erneut; Garage, Einstellungen und Tankbuch bleiben erhalten.
+
+- Impactor kann sie für dich erneuern: Schalte beim Installieren seine
+  Erneuerungsoption ein. Unter Windows und macOS erneuert es sie dann im
+  Hintergrund, solange der Computer läuft und das iPhone im selben WLAN ist;
+  unter Linux nur, solange das iPhone per Kabel verbunden ist.
+- Es können höchstens 3 per Sideloading installierte Apps gleichzeitig vorhanden
+  sein, und pro Woche lassen sich nur 10 App-IDs registrieren. SmartZT braucht
+  2: die App und ihre Erweiterung für die Bildschirmübertragung.
+- AltStore und Sideloadly funktionieren genauso, wurden aber noch nicht
+  getestet.
+
+**SideStore (7 Tage, ohne Computer).** [SideStore](https://sidestore.io) läuft
+auf dem iPhone und signiert deine Apps dort neu, über ein lokales VPN auf dem
+Telefon selbst (LocalDevVPN). Einen Computer brauchst du nur einmal, um es zu
+installieren (Impactor kann das); danach erneuert es SmartZT jede Woche von
+selbst über WLAN. Es nutzt weiterhin eine kostenlose Apple-ID, die Grenzen von 7
+Tagen und 3 Apps bleiben also, und SideStore zählt selbst als eine der 3.
+
+**Kostenpflichtiges Apple-Entwicklerkonto (1 Jahr).** Mit einer Mitgliedschaft
+im [Apple Developer Program](https://developer.apple.com/programs/) (99 USD pro
+Jahr) meldest du dich in Impactor mit diesem Konto an: Die App hält ein Jahr
+(weniger, wenn die Mitgliedschaft früher endet), und die Grenzen von 3 Apps und
+10 IDs entfallen. Die Schritte sind dieselben.
+
+**TrollStore (dauerhaft, nur ältere iOS-Versionen).**
+[TrollStore](https://github.com/opa334/TrollStore) nutzt einen iOS-Fehler, um
+Apps ohne Apple-ID so zu installieren, dass sie nie ablaufen. Apple hat den
+Fehler behoben, deshalb funktioniert es nur unter iOS 14.0 bis 16.6.1, 16.7 RC
+und 17.0, und nie unter 16.7.x oder 17.0.1 und neuer. Die Bildschirmspiegelung
+braucht iOS 16, für die ganze App heißt das also iOS 16.0 bis 16.6.1, 16.7 RC
+oder 17.0. Installiere TrollStore mit der Anleitung von
+[ios.cfw.guide](https://ios.cfw.guide/installing-trollstore) und öffne damit die
+SmartZT-`.ipa`. Ungetestet: Für die Bildschirmspiegelung müssen die App und ihre
+Übertragungserweiterung Daten teilen, und das funktioniert unter TrollStore
+womöglich nicht.
+
+Meide kostenpflichtige „Signaturzertifikat“-Dienste: Apple widerruft sie oft,
+und die App lässt sich dann ohne Vorwarnung nicht mehr öffnen.
 
 ### Bildschirmspiegelung auf iOS
 

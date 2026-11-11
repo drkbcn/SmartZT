@@ -129,25 +129,66 @@ sideloading gratuit et open source :
    Device Management*), touchez votre identifiant Apple et faites-lui
    confiance.
 
-**Avec un identifiant Apple gratuit :**
-
-- Apple fait cesser l'ouverture de l'application au bout de **7 jours**.
-  Réinstallez-la avec Impactor (Impactor peut aussi la renouveler pour vous) ;
-  votre garage, vos réglages et votre journal des pleins sont conservés.
-- Vous pouvez avoir au plus 3 applications installées en sideloading en même
-  temps, et enregistrer seulement 10 identifiants d'app par semaine. SmartZT en
-  utilise 2 : l'application et son extension de diffusion de l'écran.
-
 **Si Impactor affiche** `An Application Group with Identifier
 'group.com.vitapps.smartzt.…' is not available`, réinstallez-la : cela peut
 arriver lors de la première installation, et à la deuxième tentative le groupe
 est déjà créé.
 
-AltStore, SideStore et Sideloadly devraient aussi fonctionner, mais seul
-Impactor a été essayé pour l'instant.
-
 **Pour mettre à jour**, téléchargez le nouveau `.ipa` et installez-le
 par-dessus l'actuel de la même façon.
+
+### Durée de l'installation
+
+| Option | S'ouvre encore pendant | Coût | Essayé avec SmartZT |
+|---|---|---|---|
+| Identifiant Apple gratuit (Impactor) | 7 jours, puis à renouveler | Gratuit | Oui |
+| SideStore (identifiant Apple gratuit) | 7 jours, renouvelée sur l'iPhone | Gratuit | Non |
+| Compte développeur Apple payant | 1 an | 99 USD par an | Non |
+| TrollStore | N'expire jamais | Gratuit | Non (anciens iOS uniquement) |
+
+**Identifiant Apple gratuit (7 jours).** Apple fait cesser l'ouverture de
+l'application 7 jours après sa signature. Renouvelez-la avant, ou
+réinstallez-la ; votre garage, vos réglages et votre journal des pleins sont
+conservés.
+
+- Impactor peut la renouveler pour vous : activez son option de renouvellement
+  lors de l'installation. Sous Windows et macOS, il la renouvelle en
+  arrière-plan tant que l'ordinateur est allumé et que l'iPhone est sur le même
+  Wi-Fi ; sous Linux, seulement quand l'iPhone est branché par câble.
+- Vous pouvez avoir au plus 3 applications installées en sideloading en même
+  temps, et enregistrer seulement 10 identifiants d'app par semaine. SmartZT en
+  utilise 2 : l'application et son extension de diffusion de l'écran.
+- AltStore et Sideloadly fonctionnent de la même façon, mais n'ont pas encore
+  été essayés.
+
+**SideStore (7 jours, sans ordinateur).** [SideStore](https://sidestore.io)
+s'installe sur l'iPhone et y re-signe vos applications, grâce à un VPN local sur
+le téléphone lui-même (LocalDevVPN). Il faut un ordinateur une seule fois pour
+l'installer (Impactor peut le faire) ; ensuite, il renouvelle SmartZT chaque
+semaine tout seul, en Wi-Fi. Il utilise toujours un identifiant Apple gratuit :
+les limites de 7 jours et de 3 applications restent, et SideStore compte
+lui-même pour l'une des 3.
+
+**Compte développeur Apple payant (1 an).** Avec un abonnement à
+l'[Apple Developer Program](https://developer.apple.com/programs/) (99 USD par
+an), connectez-vous à Impactor avec ce compte : l'application dure un an (moins
+si l'abonnement se termine avant) et les limites de 3 applications et 10
+identifiants disparaissent. Les étapes sont les mêmes.
+
+**TrollStore (permanent, anciens iOS uniquement).**
+[TrollStore](https://github.com/opa334/TrollStore) exploite une faille d'iOS
+pour installer des applications qui n'expirent jamais, sans identifiant Apple.
+Apple a corrigé la faille : il ne fonctionne que sur iOS 14.0 à 16.6.1, 16.7 RC
+et 17.0, et jamais sur 16.7.x ni sur 17.0.1 et ultérieurs. La duplication
+d'écran nécessite iOS 16 ; pour l'application complète, cela veut donc dire
+iOS 16.0 à 16.6.1, 16.7 RC ou 17.0. Installez TrollStore avec le guide
+d'[ios.cfw.guide](https://ios.cfw.guide/installing-trollstore), puis ouvrez
+avec lui le `.ipa` de SmartZT. Pas encore essayé : la duplication d'écran a
+besoin que l'application et son extension de diffusion partagent des données,
+ce qui pourrait ne pas fonctionner avec TrollStore.
+
+Évitez les services payants de « certificats de signature » : Apple les révoque
+souvent, et l'application cesse de s'ouvrir sans prévenir.
 
 ### Duplication d'écran sur iOS
 

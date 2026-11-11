@@ -121,25 +121,64 @@ strumento di sideloading gratuito e open source:
    Generali › VPN e gestione dispositivi** (*Settings › General › VPN & Device
    Management*), tocca il tuo Apple ID e autorizzalo.
 
-**Con un Apple ID gratuito:**
-
-- Apple fa smettere di aprirsi l'app dopo **7 giorni**. Reinstallala con
-  Impactor (Impactor può anche rinnovarla per te); garage, impostazioni e
-  registro dei rifornimenti vengono mantenuti.
-- Si possono avere al massimo 3 app installate in sideloading
-  contemporaneamente, e registrare solo 10 identificativi di app a settimana.
-  SmartZT ne usa 2: l'app e la sua estensione di trasmissione dello schermo.
-
 **Se Impactor mostra** `An Application Group with Identifier
 'group.com.vitapps.smartzt.…' is not available`, installala di nuovo: può
 succedere alla prima installazione, e al secondo tentativo il gruppo è già
 stato creato.
 
-Anche AltStore, SideStore e Sideloadly dovrebbero funzionare, ma finora è
-stato provato solo Impactor.
-
 **Per aggiornare**, scarica il nuovo `.ipa` e installalo sopra quello attuale
 allo stesso modo.
+
+### Quanto dura l'installazione
+
+| Opzione | Continua ad aprirsi per | Costo | Provato con SmartZT |
+|---|---|---|---|
+| Apple ID gratuito (Impactor) | 7 giorni, poi va rinnovata | Gratis | Sì |
+| SideStore (Apple ID gratuito) | 7 giorni, rinnovata sull'iPhone | Gratis | No |
+| Account sviluppatore Apple a pagamento | 1 anno | 99 USD all'anno | No |
+| TrollStore | Non scade mai | Gratis | No (solo iOS meno recenti) |
+
+**Apple ID gratuito (7 giorni).** Apple fa smettere di aprirsi l'app 7 giorni
+dopo la firma. Rinnovala prima, oppure reinstallala; garage, impostazioni e
+registro dei rifornimenti vengono mantenuti.
+
+- Impactor può rinnovarla per te: attiva la sua opzione di rinnovo quando la
+  installi. Su Windows e macOS la rinnova in background finché il computer è
+  acceso e l'iPhone è sulla stessa rete Wi-Fi; su Linux, solo mentre l'iPhone è
+  collegato via cavo.
+- Si possono avere al massimo 3 app installate in sideloading
+  contemporaneamente, e registrare solo 10 identificativi di app a settimana.
+  SmartZT ne usa 2: l'app e la sua estensione di trasmissione dello schermo.
+- AltStore e Sideloadly funzionano allo stesso modo, ma non sono ancora stati
+  provati.
+
+**SideStore (7 giorni, senza computer).** [SideStore](https://sidestore.io) vive
+sull'iPhone e rifirma lì le tue app, tramite una VPN locale sul telefono stesso
+(LocalDevVPN). Serve un computer una sola volta per installarlo (Impactor può
+farlo); da lì in poi rinnova SmartZT ogni settimana da solo via Wi-Fi. Usa
+comunque un Apple ID gratuito, quindi i limiti di 7 giorni e 3 app restano, e
+SideStore stesso conta come una delle 3.
+
+**Account sviluppatore Apple a pagamento (1 anno).** Con l'iscrizione
+all'[Apple Developer Program](https://developer.apple.com/programs/) (99 USD
+all'anno), accedi a Impactor con quell'account: l'app dura un anno (meno se
+l'iscrizione finisce prima) e spariscono i limiti di 3 app e 10
+identificativi. I passaggi sono gli stessi.
+
+**TrollStore (permanente, solo iOS meno recenti).**
+[TrollStore](https://github.com/opa334/TrollStore) sfrutta un bug di iOS per
+installare app che non scadono mai, senza Apple ID. Apple ha corretto il bug,
+quindi funziona solo su iOS da 14.0 a 16.6.1, 16.7 RC e 17.0, e mai su 16.7.x o
+su 17.0.1 e successivi. La duplicazione dello schermo richiede iOS 16, quindi
+per l'app completa significa iOS da 16.0 a 16.6.1, 16.7 RC o 17.0. Installa
+TrollStore con la guida di
+[ios.cfw.guide](https://ios.cfw.guide/installing-trollstore), poi apri con esso
+il `.ipa` di SmartZT. Non provato: la duplicazione dello schermo richiede che
+l'app e la sua estensione di trasmissione condividano dati, e con TrollStore
+potrebbe non funzionare.
+
+Evita i servizi a pagamento di "certificati di firma": Apple li revoca spesso e
+l'app smette di aprirsi senza preavviso.
 
 ### Duplicazione dello schermo su iOS
 
